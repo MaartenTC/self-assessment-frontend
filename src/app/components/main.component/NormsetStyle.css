@@ -1,0 +1,132 @@
+.checkbox {
+    border: 1px solid #323F4B;
+}
+#normListDiv {
+    padding: 10px;
+}
+#filterContent.active {
+    display: block;
+}
+#filterContent {
+    border: 2px solid #323F4B;
+    border-radius: 5px;
+    position: absolute;
+    height: auto;
+    overflow-y: scroll;
+    background-color: white;
+    display: none;
+    flex-direction: row;
+    width: auto;
+    padding: 5px;
+}
+#filterButton {
+    border-radius: 5px;
+    object-fit: contain;
+    width: 40px;
+    height: 30px;
+    cursor: pointer;
+    background-color: white;
+    border : 1px solid #323F4B
+}
+#filterButton.active {
+    box-shadow: 4px 4px 5px gray inset;
+
+}
+.findingRisk {
+    justify-content: center;
+    background-color: rgb(170, 141, 61);
+    cursor: pointer;
+    text-align: center;
+}
+.findingText:hover {
+    background-color: lightblue;
+    cursor: pointer;
+}
+.findingText {
+    border-bottom: 1px solid gray;
+    overflow-x: hidden;
+}
+
+#normsetContainerDiv {
+    grid-area: normset;
+    overflow-y: scroll;
+    height: 100vh;
+    display: block;
+    padding-right: 3%;
+}
+
+.normFindingRow {
+    display: grid;
+    grid-template-columns: 8fr 1fr;
+    grid-template-areas: "finding risk";
+}
+#normsetHeader {
+    display: inline-block;
+    width: 100%;
+}
+table {
+    width: 100%;
+}
+label {
+    width: 100%;
+    display: block;
+    margin-bottom: 5px;
+}
+#normInfoHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#normListItem{
+    padding: 10px;
+    border: 1px solid #323F4B;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+ul {
+  list-style-type: none;
+  padding: 0px;
+  margin-top: 0px;
+}
+#norm-explanation {
+    max-height: 10vh;
+    overflow-y: hidden;
+    transition: max-height 0.3s ease-in-out;
+}
+#normListItemContainer.expanded #norm-explanation{
+    overflow-y: scroll;
+    max-height: 50vh;
+}
+#normListItemContainer:hover #normInfoHeaderButtons {
+    display: flex;
+}
+.toggleButton {
+cursor: pointer;
+background-color: white;
+border-color: #DE911D;
+margin: 5px;
+border-radius: 50%;
+width: 30px;
+height: 30px;
+}
+#historyButton {
+cursor: pointer;
+background-color: white;
+border-color: blue;
+margin: 5px;
+width: 30px;
+height: 30px;
+}
+@media screen and (min-width: 1920px) and (min-height: 1080px) {
+  #historyButton {
+    width: 35px;
+    height: 35px;
+  }
+}
+#normInfoHeaderButtons {
+    align-items: center;
+    display: none;
+}
+.riskHead {
+    text-align: center;
+}

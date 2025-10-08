@@ -1,0 +1,10 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: self-assessment-frontend
+  description: Angular/Typescript frontend voor Self Assessment Tool
+spec:
+  owner: software-delivery
+  type: website
+  lifecycle: initial
+  application: APM0001239 #Corresponds to  Stations Configurator

@@ -1,0 +1,75 @@
+/* You can add global styles to this file, and also import other style files */
+.secondary-button {
+    height: 30px;
+    border-radius : 5px;
+    border : 2px solid #323F4B;
+    background-color: #323F4B;
+    color: white;
+}
+
+.secondary-button:hover {
+  background-color: #CBD2D9;
+  color : #1F2933;
+}
+.secondary-button:active {
+    background-color: #98AEEB;
+    color : #1F2933;
+
+}
+.primary-button {
+    height : 30px;
+    margin-top: 3px;
+    border: 2px #19216C;
+    border-radius : 5px;
+    background-color: #19216C;
+    color: white;
+}
+.primary-button:hover {
+  border: 2px solid #19216C;
+  background-color: lightblue;
+  color: #19216C;
+}
+.primary-button:active {
+    background-color: blue;
+}
+small{
+    color: gray;
+}
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+ads-alert {
+    position: absolute;
+    bottom: 20px;
+    animation: 0.5s linear fadein;
+}
+.button-wrapper {
+    position: relative;
+}
+.close-button {
+border: red;
+border-radius: 5px;
+background-color: red;
+color: white;
+position: absolute;
+top: 0;
+right: 0;
+margin: 10px;
+}
+.close-button:hover {
+color : red;
+background-color: lightcoral;
+}
+.close-button:active {
+background-color: red;
+}
+dialog {
+  border: 1px solid #323F4B;
+  border-radius : 10px;
+}

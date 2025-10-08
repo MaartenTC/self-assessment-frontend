@@ -1,0 +1,25 @@
+#app-container {
+    display: grid;
+    grid-template-columns: 1fr 5fr 1.3fr;
+    grid-template-areas:
+    "header header header"
+    "nav main aside";
+    transition: grid-template-columns 0.5s ease-in-out;
+    font-family: Arial, sans-serif;
+}
+header{
+    height: 7vh;
+    background-color: #19216C;
+    grid-area: header;
+}
+nav-component{
+    grid-area: nav;
+}
+main-component{
+    grid-area: main;
+    display: flex;
+}
+application-info-component{
+    grid-area: aside;
+}
+
