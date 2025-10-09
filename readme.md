@@ -15,5 +15,6 @@ Ga dan naar **https://nodejs.org/en/download** en download een nieuwe versie, of
 ## License
 This project is licensed under the Apache License Version 2.0 - see licence for details.
 
+<img width="2560" height="1275" alt="image" src="https://github.com/user-attachments/assets/1b4fe813-25f6-4da5-ad7e-7b6dad9e9a6f" />
 
 
