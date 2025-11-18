@@ -1,5 +1,5 @@
 # Self-Assessment-Frontend
-Deze repo bevat de frontend voor https://github.com/Alliander/self-assessment
+Deze repo bevat de frontend voor https://github.com/MaartenTC/self-assessment-backend-open
 <img width="2560" height="1275" alt="image" src="https://github.com/user-attachments/assets/1b4fe813-25f6-4da5-ad7e-7b6dad9e9a6f" />
 
 ## Angular downloaden
