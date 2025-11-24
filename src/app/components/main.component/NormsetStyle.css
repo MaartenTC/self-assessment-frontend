@@ -26,12 +26,14 @@
     height: 30px;
     cursor: pointer;
     background-color: white;
-    border : 1px solid #323F4B
-}
-#filterButton.active {
-    box-shadow: 4px 4px 5px gray inset;
+    border : 1px solid #323F4B;
+    box-shadow: -2px -3px 4px gray inset
 
 }
+#filterButton.active {
+  box-shadow: 4px 4px 5px gray inset;
+}
+
 .findingRisk {
     justify-content: center;
     background-color: rgb(170, 141, 61);
@@ -39,7 +41,7 @@
     text-align: center;
 }
 .findingText:hover {
-    background-color: lightblue;
+    background-color: #BED0F7;
     cursor: pointer;
 }
 .findingText {

@@ -9,7 +9,7 @@ import { ExportComponent } from "./ExportComponent";
   selector: 'nav-component',
   template: `
   <div class="overview-container">
-    <div>
+    <div class="overview-content-container">
       <h2>Assessments</h2>
       <ul>
         @if(this.assessments.length > 0) {
@@ -45,27 +45,36 @@ import { ExportComponent } from "./ExportComponent";
         border-bottom: 1px solid gray;
         display: flex;
         flex-direction: column;
+
     }
     li.assessmentItem {
         cursor: pointer;
   }
-    li:active {
-      background-color: lightblue;
-    }
+
     li:hover {
-        box-shadow : 10px 0 lightblue inset;
+        box-shadow: 0 0 0 3px #E0E8F9 inset;
         cursor: pointer;
       }
+    li:active {
+      box-shadow: 0 0 0 3px #98AEEB inset
+    }
     li:hover img {
       display: inline-flex;
     }
     .overview-container {
-    height: 100vh;
-    border-right: 1px solid gray;
-    padding-left: 5%;
-    padding-right: 5%;
-    overflow-x: hidden;
-    overflow-y: scroll;
+      height: 100vh;
+      border-right: 1px solid gray;
+      padding-left: 5%;
+      padding-right: 5%;
+      overflow-x: hidden;
+      overflow-y: scroll;
+      background-color: #E4E7EB;
+    }
+    .overview-content-container {
+      background-color: white;
+      border-radius: 5px;
+      padding: 0 20px 5px 20px;
+      margin-bottom: 10px;
     }
     img{
       display:none;
@@ -73,9 +82,15 @@ import { ExportComponent } from "./ExportComponent";
       height: 20px;
       cursor: pointer;
       margin-left: 10%;
+      border: 2px solid transparent;
+      padding: 4px;
     }
     img:hover {
-      background-color: lightblue;
+      border-radius: 50%;
+      border: 2px solid #19216C;
+    }
+    img:active {
+      background-color: #98AEEB;
     }
     #applicationname-container {
       display: flex;
@@ -85,7 +100,9 @@ import { ExportComponent } from "./ExportComponent";
       width: 90%;
       overflow: hidden;
     }
-
+    h2 {
+      text-align: center;
+    }
     `
     ,
   imports: [NewAssessmentDialogComponent, ResponseIconComponent, ExportComponent],
@@ -95,7 +112,7 @@ export class AssessmentOverviewComponent implements OnInit  {
   @Output() assessmentSelected = new EventEmitter<AssessmentDTO>();
   @ViewChild(NewAssessmentDialogComponent) newAssessmentDialog!: NewAssessmentDialogComponent;
   @ViewChild(ResponseIconComponent) responseIcon!: ResponseIconComponent;
-  @ViewChild(ExportComponent) exportCompoent! : ExportComponent;
+  @ViewChild(ExportComponent) exportComponent! : ExportComponent;
   responseStatus : number = 500;
   assessmentService : AssessmentService = inject(AssessmentService);
   ngOnInit() : void {
@@ -126,6 +143,6 @@ reloadAssessments(): void {
     this.assessmentSelected.emit(assessment);
   }
   openExport(assessment : AssessmentDTO){
-    this.exportCompoent.open(assessment);
+    this.exportComponent.open(assessment);
   }
 }

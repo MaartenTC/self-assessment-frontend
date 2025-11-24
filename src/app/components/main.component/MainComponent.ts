@@ -22,13 +22,14 @@ import { FindingDTO } from "../../dto/FindingDTO";
             grid-template-areas: "normset measurement";
             padding-left: 3%;
             padding-right: 3%;
+            width: 100%;
         }
         normset-component {
             grid-area: normset;
         }
         measurement-component {
             grid-area: measurement;
-            height: 100vh; 
+            height: 100vh;
         }
 
     `,
@@ -59,6 +60,7 @@ export class MainComponent{
     }
     reloadNormset(): void {
         this.normsetComponent.fetchNormset(this.currentApplicationId);
+
     }
 
 

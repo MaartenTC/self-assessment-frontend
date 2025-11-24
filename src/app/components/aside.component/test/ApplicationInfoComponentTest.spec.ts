@@ -48,7 +48,7 @@ describe('ApplicationInfo', () => {
     it('toggleActive() should toggle active and icon', () => {
         component.toggleActive();
         expect(component.active).toBeFalse();
-        expect(component.icon).toBe('▼'); 
+        expect(component.icon).toBe('▼');
 
         component.toggleActive();
         expect(component.active).toBeTrue();
@@ -116,6 +116,6 @@ describe('ApplicationInfo', () => {
         spyOn(component.applicationFormComponent, "showFailed");
         spyOn(assessmentService, "updateApplicationContext").and.returnValue(Promise.reject(new Error("Update failed")));
         component.updateApplicationContext();
-        expect(component.applicationFormComponent.showFailed).toHaveBeenCalled;
+        expect(component.applicationFormComponent.showFailed).toHaveBeenCalled();
     })
 });

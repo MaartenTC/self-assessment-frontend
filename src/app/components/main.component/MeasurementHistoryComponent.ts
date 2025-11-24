@@ -51,6 +51,7 @@ import { TimestampAsDateStringPipe } from '../../pipes/TimestampAsDatePipe';
         th {
             text-align: left;
             vertical-align: top;
+            padding-right: 10px;
         }
         td {
             overflow-wrap: anywhere;
@@ -68,7 +69,7 @@ import { TimestampAsDateStringPipe } from '../../pipes/TimestampAsDatePipe';
         dialog {
             max-width: 50vw;
         }
-        
+
     `,
     imports: [ResponseIconComponent, TimestampAsDateStringPipe],
     schemas: [CUSTOM_ELEMENTS_SCHEMA]

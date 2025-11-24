@@ -53,21 +53,18 @@ ads-alert {
     position: relative;
 }
 .close-button {
-border: red;
-border-radius: 5px;
-background-color: red;
-color: white;
-position: absolute;
-top: 0;
-right: 0;
-margin: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #E12D39;
+  color: white;
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 10px;
+  font-size: 15px;
 }
 .close-button:hover {
-color : red;
-background-color: lightcoral;
-}
-.close-button:active {
-background-color: red;
+  background-color: #AB091E;
 }
 dialog {
   border: 1px solid #323F4B;

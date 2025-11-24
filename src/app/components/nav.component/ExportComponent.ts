@@ -56,7 +56,7 @@ export class ExportComponent{
     const url = window.URL.createObjectURL(blob);
     const a = document.createElement('a');
     a.href = url;
-    a.download = "assessment.json";
+    a.download = `assessment_${startDate.toLocaleDateString()}_to_${endDate.toLocaleDateString()}.json`;
     document.body.appendChild(a);
     a.click();
     document.body.removeChild(a);

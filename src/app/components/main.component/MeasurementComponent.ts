@@ -16,9 +16,10 @@ import { AssessmentService } from "../../service/AssessmentService"
         <p>{{finding.text}}</p>
         <form [formGroup]="measurementForm" id="findingForm" (submit)="submit($event)" [class.invalid-form]="measurementForm.invalid" [class.valid-form]="measurementForm.valid">
             <div id="riskInput">
-                <p id="new-risk-display">Risk: {{measurementForm.value.newRisk}}</p>
+                <p id="risk-number-label">Risk:</p>
+                <p id="risk-number">{{measurementForm.value.newRisk}}</p>
                 <input type="range" step="5" formControlName="newRisk" id="newrisk-slider" min={{minRisk}} max={{maxRisk}}>
-                <img title="reset" alt="reset new risk" id="reset-button" type="button" (click)="resetSlider()" src="reset_icon.png">
+                <img title="reset" aria-label="reset new risk slider" id="reset-button" type="button" (click)="resetSlider()" src="reset_icon.png">
             </div>
             <div id="input-fields" class="input-wrapper">
                 <label class="textCount" [class.maxxedOut]="isMaxxedOut(measurementForm.value.explanation)">{{getCharacterLimit(measurementForm.value.explanation)}}</label>
@@ -43,10 +44,10 @@ import { AssessmentService } from "../../service/AssessmentService"
         <div id="normInfo">
             <div id="normInfoHeader">
             <h2 title={{norm.name}} id="normTitle" >Norm: {{norm.name}}</h2>
-            <p id="normType" [style.border]="measurementBorderColor(norm.assessmentType)" alt="norm asessmenttype">{{norm.assessmentType}}</p>
+            <p id="normType" [style.border]="measurementBorderColor(norm.assessmentType)">{{norm.assessmentType}}</p>
             </div>
             <small>ID: {{norm.normId}}</small>
-            <p alt="norm categories">{{norm.categories}}</p>
+            <p>{{norm.categories}}</p>
             <a [href]="norm.link" target="_blank">{{norm.link}}</a>
         </div>
     </div>`,

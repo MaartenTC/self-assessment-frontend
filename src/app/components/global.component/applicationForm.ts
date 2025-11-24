@@ -81,6 +81,7 @@ import { ApplicationDTO } from "../../dto/ApplicationDTO";
         padding: 20px;
         border: 1px solid #323F4B;
         border-radius: 5px;
+        background-color: white;
     }
     .invalid-form{
     border : 1px solid red;

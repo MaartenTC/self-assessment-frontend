@@ -1,7 +1,16 @@
-#new-risk-display {
+#risk-number-label {
     grid-area: left;
 }
-
+#risk-number{
+  grid-area: bottom;
+  margin-top: 0px;
+  width: fit-content;
+  padding: 5px;
+  border-radius: 20%;
+  font-weight: bold;
+  background: #FFB088;
+  border: none;
+}
 .primary-button {
     height: 30px;
     width: 70px;
@@ -9,9 +18,12 @@
 
 #riskInput {
     display: grid;
-    grid-template-columns: 1.5fr 5fr 1fr;
-    grid-template-areas: "left center right";
+    grid-template-columns: 0.8fr 5fr 0.8fr;
+    grid-template-areas:
+      "left center right"
+      "bottom bottom bottom";
     align-items: center;
+    width: 60%;
 }
 .measurement-container {
     height: 100vh;
@@ -23,9 +35,16 @@
     cursor: pointer;
     margin: auto;
     object-fit: contain;
-    width: 50%;
-    height: 50%;
+    width: 30px;
+    height: 30px;
     grid-area: right;
+    border-radius: 50%;
+}
+#reset-button:hover{
+  background-color: #FFB088;
+}
+#reset-button:active{
+  background-color: #FF9466;
 }
 #newrisk-slider {
     cursor: grab;
@@ -78,4 +97,7 @@ textarea {
     align-content: center;
     height: 30px;
     width: 80px;
+}
+input[type="range"]{
+  accent-color: #F9703E;
 }

@@ -4,7 +4,8 @@ import {
   CUSTOM_ELEMENTS_SCHEMA,
   Output,
   EventEmitter,
-  inject
+  inject,
+  HostListener
 } from "@angular/core";
 import { NormsetDTO } from "../../dto/NormsetDTO";
 import { NormDTO } from "../../dto/NormDTO";
@@ -139,6 +140,16 @@ export class NormsetComponent {
             });
         });
 
+    }
+    @HostListener('document:click', ['$event'])
+    clickOutside(event: Event) {
+      if (!this.filterActive) return;
+      const target = event.target as HTMLElement;
+      const filterContainer = document.getElementById('filterContainer');
+
+      if (filterContainer && !filterContainer.contains(target)) {
+        this.filterActive = false;
+      }
     }
 
     toggleNormExpansion(normId : number): void {

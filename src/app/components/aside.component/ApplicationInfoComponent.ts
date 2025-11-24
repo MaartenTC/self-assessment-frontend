@@ -12,9 +12,9 @@ import { AssessmentService } from '../../service/AssessmentService';
   selector: 'application-info-component',
   template: `
     <div class="application-info-container">
-        <button class="toggleButton" (click)="toggleActive()">{{icon}}</button>
+        <button class="toggleButton" (click)="toggleActive()" aria-label="toggle application context visibility">{{icon}}</button>
         <div class="collapsible-container" [class.hidden]="!isVisible">
-          <h2>Application Info</h2>
+          <h2>Assessment Context</h2>
           <application-form (submit)="updateApplicationContext()"></application-form>
         </div>
     </div>
@@ -30,6 +30,7 @@ import { AssessmentService } from '../../service/AssessmentService';
     height: 100vh;
     width: 100%;
     display : flex;
+    background-color: #E4E7EB;
   }
   .toggleButton {
     cursor: pointer;
@@ -39,6 +40,7 @@ import { AssessmentService } from '../../service/AssessmentService';
     border-radius: 50%;
     width: 30px;
     height: 30px;
+    min-width: 30px;
   }
   .collapsible-container {
     width: 100%;
@@ -125,7 +127,9 @@ export class ApplicationInfo implements OnChanges{
             } else {
                 this.applicationFormComponent.showFailed();
             }
-    }).catch(() => this.applicationFormComponent.showFailed());;
+    }).catch(() => {
+      console.log("catch block called")
+      this.applicationFormComponent.showFailed()});
 
   }
 }
