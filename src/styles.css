@@ -70,3 +70,49 @@ dialog {
   border: 1px solid #323F4B;
   border-radius : 10px;
 }
+.required-tag{
+  color: red;
+}
+
+/* https://chatgpt.com/c/6924d33c-cbe8-8333-a709-d4e6bfa5b905
+/* Prevent layout shift by always reserving scrollbar space */
+html {
+  scrollbar-gutter: stable;
+}
+
+/* --------------------------
+   Firefox
+   -------------------------- */
+* {
+  scrollbar-width: thin;                     /* keeps stable gutter */
+  scrollbar-color: transparent transparent;  /* hide thumb */
+}
+
+/* show thumb on hover (Firefox) */
+*:hover {
+  scrollbar-color: rgba(0, 0, 0, 0.5) transparent;
+}
+
+/* --------------------------
+   Chrome / Edge / Safari
+   -------------------------- */
+*::-webkit-scrollbar {
+  width: 12px;   /* reserved width — no layout shift */
+}
+
+*::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: transparent; /* hidden */
+  border-radius: 8px;
+  opacity: 0;                    /* hidden */
+  transition: opacity 0.2s;
+}
+
+/* show thumb on hover (WebKit) */
+*:hover::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 1;
+}

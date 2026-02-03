@@ -27,7 +27,6 @@ import { AssessmentService } from '../../service/AssessmentService';
   .application-info-container {
     float: right;
     border-left: 1px solid #323F4B;
-    height: 100vh;
     width: 100%;
     display : flex;
     background-color: #E4E7EB;

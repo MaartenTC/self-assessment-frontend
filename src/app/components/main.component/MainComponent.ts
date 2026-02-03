@@ -23,13 +23,15 @@ import { FindingDTO } from "../../dto/FindingDTO";
             padding-left: 3%;
             padding-right: 3%;
             width: 100%;
+            height:inherit;
         }
         normset-component {
             grid-area: normset;
+            height:inherit;
         }
         measurement-component {
             grid-area: measurement;
-            height: 100vh;
+            height:inherit;
         }
 
     `,

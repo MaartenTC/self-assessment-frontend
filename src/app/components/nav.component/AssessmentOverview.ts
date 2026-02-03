@@ -62,12 +62,10 @@ import { ExportComponent } from "./ExportComponent";
       display: inline-flex;
     }
     .overview-container {
-      height: 100vh;
       border-right: 1px solid gray;
       padding-left: 5%;
       padding-right: 5%;
       overflow-x: hidden;
-      overflow-y: scroll;
       background-color: #E4E7EB;
     }
     .overview-content-container {
@@ -75,6 +73,9 @@ import { ExportComponent } from "./ExportComponent";
       border-radius: 5px;
       padding: 0 20px 5px 20px;
       margin-bottom: 10px;
+      height: 90%;
+      overflow-y: scroll;
+      margin-top: 20px;
     }
     img{
       display:none;

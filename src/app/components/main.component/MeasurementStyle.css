@@ -26,7 +26,6 @@
     width: 60%;
 }
 .measurement-container {
-    height: 100vh;
     display: flex;
     flex-direction: column;
     padding-left: 3%;
@@ -62,6 +61,7 @@ textarea {
     resize: none;
     overflow-y: scroll;
     padding-top: 15px;
+    font-size: 16px;
 }
 #normInfo {
     margin-top: 20px;
@@ -100,4 +100,10 @@ textarea {
 }
 input[type="range"]{
   accent-color: #F9703E;
+}
+#explanation {
+  margin-bottom: 10px;
+}
+#finding-heading{
+
 }

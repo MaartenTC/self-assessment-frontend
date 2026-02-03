@@ -20,7 +20,6 @@ import { TimestampAsDateStringPipe } from "../../pipes/TimestampAsDatePipe";
 @Component({
   selector: "normset-component",
   template: `
-    <div class="container">
       <div id="normsetContainerDiv">
         <div id="normsetHeader">
           <div>
@@ -97,7 +96,6 @@ import { TimestampAsDateStringPipe } from "../../pipes/TimestampAsDatePipe";
           </ul>
         </div>
       </div>
-    </div>
   `,
   styleUrls: ["../../../styles.css","./NormsetStyle.css"],
   imports: [FormsModule, TimestampAsDateStringPipe],

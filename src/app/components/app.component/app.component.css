@@ -13,13 +13,16 @@ header{
     grid-area: header;
 }
 nav-component{
+    height:93vh;
     grid-area: nav;
 }
 main-component{
+    height: 93vh;
     grid-area: main;
     display: flex;
 }
 application-info-component{
+    height: 93vh;
     grid-area: aside;
 }
 

@@ -50,11 +50,10 @@
 }
 
 #normsetContainerDiv {
-    grid-area: normset;
-    overflow-y: scroll;
-    height: 100vh;
     display: block;
     padding-right: 3%;
+    height: 100%;
+    overflow-y: scroll;
 }
 
 .normFindingRow {

@@ -12,22 +12,26 @@ import { AssessmentService } from "../../service/AssessmentService"
     selector: 'measurement-component',
     template: `
     <div class="measurement-container">
-        <h2>Finding</h2>
-        <p>{{finding.text}}</p>
+        <div id="finding-heading">
+          <h2>Finding</h2>
+          <p>{{finding.text}}</p>
+        </div>
         <form [formGroup]="measurementForm" id="findingForm" (submit)="submit($event)" [class.invalid-form]="measurementForm.invalid" [class.valid-form]="measurementForm.valid">
             <div id="riskInput">
-                <p id="risk-number-label">Risk:</p>
+                <label id="risk-number-label" for="newrisk-slider">Risk</label>
                 <p id="risk-number">{{measurementForm.value.newRisk}}</p>
                 <input type="range" step="5" formControlName="newRisk" id="newrisk-slider" min={{minRisk}} max={{maxRisk}}>
                 <img title="reset" aria-label="reset new risk slider" id="reset-button" type="button" (click)="resetSlider()" src="reset_icon.png">
             </div>
+            <label for="explanation">Reason for finding<span class="required-tag">*</span></label>
             <div id="input-fields" class="input-wrapper">
-                <label class="textCount" [class.maxxedOut]="isMaxxedOut(measurementForm.value.explanation)">{{getCharacterLimit(measurementForm.value.explanation)}}</label>
-                <textarea placeholder="Reason for finding (required)" formControlName="explanation"></textarea>
+                <span class="textCount" [class.maxxedOut]="isMaxxedOut(measurementForm.value.explanation)">{{getCharacterLimit(measurementForm.value.explanation)}}</span>
+                <textarea id="explanation" placeholder="Reason for finding (required)" formControlName="explanation"></textarea>
                 @if(measurementForm.value.newRisk != finding.risk){
-                    <div class="input-wrapper">
-                        <label class="textCount" [class.maxxedOut]="isMaxxedOut(measurementForm.value.correction)">{{getCharacterLimit(measurementForm.value.correction)}}</label>
-                        <textarea placeholder="Reason for new risk" formControlName="correction"></textarea>
+                  <label for="correction">Reason for new risk</label>
+                  <div class="input-wrapper">
+                        <span class="textCount" [class.maxxedOut]="isMaxxedOut(measurementForm.value.correction)">{{getCharacterLimit(measurementForm.value.correction)}}</span>
+                        <textarea id="correction" placeholder="Reason for new risk" formControlName="correction"></textarea>
                     </div>
                 }
             </div>
